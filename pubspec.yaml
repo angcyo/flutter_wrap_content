@@ -11,7 +11,8 @@ topics:
   - flutter
   - android
   - ui
-  - wrap_content
+  - wrap
+  - content
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
