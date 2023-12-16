@@ -1,39 +1,27 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+[![pub package](https://img.shields.io/pub/v/flutter_wrap_content.svg)](https://pub.dev/packages/flutter_wrap_content)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# flutter_wrap_content
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+Flutter 实现 Android 中的 wrap_content 效果.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![screenshot](png/png.png)
 
-## Features
+## Installation
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+安装最新版本. [from pub](https://pub.dev/packages/flutter_wrap_content/install).
 
-## Getting started
+## Quick Start
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+导入对应的包, 使用 `wrapContent` 扩展方法包裹需要实现 `wrap_content` 效果的组件即可.
 
 ```dart
-const like = 'sample';
+Widget(...).wrapContent();
 ```
 
-## Additional information
+支持的属性:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+AlignmentDirectional alignment;
+double? minWidth;
+double? minHeight;
+```

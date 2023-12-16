@@ -11,6 +11,8 @@ import 'package:flutter/widgets.dart';
 ///
 
 class WrapContentLayout extends SingleChildRenderObjectWidget {
+
+  /// 对齐方式
   final AlignmentDirectional alignment;
 
   /// 指定最小的宽度, 不指定则使用[child]的宽度
