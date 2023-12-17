@@ -4,6 +4,8 @@
 
 Flutter 实现 Android 中的 wrap_content 效果.
 
+与`ConstrainedBox`的不同在于, `ConstrainedBox`只能指定`maxWidth`的约束值,而不能继承`maxWidth`的约束值.
+
 ![screenshot](png/png.png)
 
 ## Installation
