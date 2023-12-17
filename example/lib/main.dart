@@ -10,7 +10,7 @@ class MainApp extends StatelessWidget {
 
   Widget container(Widget child) => Container(
         color: Colors.red,
-        margin: const EdgeInsets.all(8),
+        margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 8),
         padding: const EdgeInsets.all(8),
         child: child,
       );
@@ -23,13 +23,17 @@ class MainApp extends StatelessWidget {
         color: color,
         child: Text(
           text,
+          style: const TextStyle(
+            fontSize: 12,
+          ),
           textAlign: TextAlign.center,
         ),
       );
 
   @override
   Widget build(BuildContext context) {
-    var m = 10;
+    var m = 7;
+    var wm = 4;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -60,7 +64,7 @@ class MainApp extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: container(
-                textWidget(text: "wrap_content布局" * m).wrapContent(),
+                textWidget(text: "wrap_content布局" * wm).wrapContent(),
               ),
             ),
             const SliverToBoxAdapter(
@@ -99,8 +103,62 @@ class MainApp extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                        child: textWidget(text: "wrap_content布局" * m)
+                        child: textWidget(text: "wrap_content布局" * wm)
                             .wrapContent())
+                  ],
+                ),
+              ),
+            ),
+            const SliverToBoxAdapter(
+              child: Text(
+                "在容器(Row-Expanded)中↓",
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: container(
+                Row(
+                  children: [
+                    container(textWidget(text: "Left")),
+                    Expanded(child: textWidget(text: "正常布局(会撑满)")),
+                    container(textWidget(text: "Right")),
+                  ],
+                ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: container(
+                Row(
+                  children: [
+                    container(textWidget(text: "Left")),
+                    Expanded(child: textWidget(text: "正常布局" * m)),
+                    container(textWidget(text: "Right")),
+                  ],
+                ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: container(
+                Row(
+                  children: [
+                    container(textWidget(text: "Left")),
+                    Expanded(
+                        child: textWidget(text: "wrap_content布局(自适应)")
+                            .wrapContent()),
+                    container(textWidget(text: "Right")),
+                  ],
+                ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: container(
+                Row(
+                  children: [
+                    container(textWidget(text: "Left")),
+                    Expanded(
+                        child: textWidget(text: "wrap_content布局" * wm)
+                            .wrapContent()),
+                    container(textWidget(text: "Right")),
                   ],
                 ),
               ),
