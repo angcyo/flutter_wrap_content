@@ -8,7 +8,7 @@ Flutter 实现 Android 中的 wrap_content 效果.
 
 ## Installation
 
-安装最新版本. [![pub package](https://img.shields.io/pub/v/flutter_wrap_content.svg)](https://pub.dev/packages/flutter_wrap_content/install).
+安装最新版本 [![pub package](https://img.shields.io/pub/v/flutter_wrap_content.svg)](https://pub.dev/packages/flutter_wrap_content/install)
 
 ## Quick Start
 
