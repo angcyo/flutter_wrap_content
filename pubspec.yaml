@@ -1,6 +1,6 @@
 name: flutter_wrap_content
 description: "Flutter 实现 Android 中的 wrap_content 效果."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/angcyo/flutter_wrap_content
 repository: https://github.com/angcyo/flutter_wrap_content
 screenshots:
