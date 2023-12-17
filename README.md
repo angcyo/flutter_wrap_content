@@ -26,7 +26,7 @@ double? minWidth;
 double? minHeight;
 ```
 
-## license
+## License
 
 MIT License
 
